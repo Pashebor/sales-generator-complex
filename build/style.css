@@ -6375,10 +6375,51 @@ button.close {
   font-family: RobotoSlabBold;
   src: url(fonts/RobotoSlab-Bold.ttf); }
 
-.advancement__title {
-  font-family: OpenSansBold;
-  font-size: 36px;
-  text-align: center; }
+.advancement {
+  padding: 25px 0 0 0; }
+  .advancement__title {
+    font-family: OpenSansBold;
+    font-size: 36px;
+    text-align: center;
+    color: #262626; }
+  .advancement__subtitle {
+    font-family: OpenSansRegular;
+    font-size: 20px;
+    text-align: center;
+    margin: 23px 0 0 0;
+    font-weight: 600;
+    color: #464646; }
+  .advancement-variants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 50px; }
+    .advancement-variants__item {
+      width: 24%; }
+      .advancement-variants__item h6 {
+        font-size: 16px;
+        text-align: center; }
+      .advancement-variants__item h6 {
+        margin-top: 30px;
+        color: #262626;
+        font-family: OpenSansBold; }
+      .advancement-variants__item p {
+        font-size: 16px;
+        text-align: center; }
+      .advancement-variants__item p {
+        margin-top: 15px;
+        color: #464646;
+        font-family: OpenSansBold; }
+      .advancement-variants__item img {
+        width: 40%;
+        display: block;
+        margin: auto; }
 
 .main {
   background-position: center center;

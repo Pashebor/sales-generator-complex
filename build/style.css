@@ -6421,6 +6421,75 @@ button.close {
         display: block;
         margin: auto; }
 
+.project {
+  margin: 70px 0 0 0;
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  color: white;
+  background-image: url(images/backgorundcpu.jpg); }
+  .project__layer {
+    padding: 46px 0 30px 0; }
+  .project__title {
+    font-size: 36px;
+    font-family: OpenSansBold;
+    color: white;
+    text-align: center; }
+  .project__layer {
+    background-color: rgba(0, 0, 0, 0.862745); }
+  .project__text {
+    margin: 22px 0 0 0;
+    font-family: OpenSansRegular;
+    font-size: 20px;
+    text-align: center;
+    color: white; }
+  .project__manager {
+    width: 100%; }
+    .project__manager figure {
+      margin: 37px 0 0 0; }
+    .project__manager img {
+      width: 128px;
+      display: block;
+      margin: auto; }
+    .project__manager figcaption {
+      font-family: OpenSansRegular;
+      font-size: 14px;
+      text-align: center;
+      margin: 10px 0 0 0; }
+  .project__empolyee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .project__empolyee__item {
+      width: 16.5%; }
+      .project__empolyee__item .arrow {
+        width: 100px;
+        height: 20px; }
+      .project__empolyee__item figure img {
+        display: block;
+        margin: auto;
+        width: 128px; }
+      .project__empolyee__item figcaption {
+        text-align: center; }
+    .project__empolyee__item:nth-child(1) {
+      margin-top: 30px; }
+    .project__empolyee__item:nth-child(2) {
+      margin-top: 60px; }
+    .project__empolyee__item:nth-child(3) {
+      margin-top: 90px; }
+    .project__empolyee__item:nth-child(4) {
+      margin-top: 90px; }
+    .project__empolyee__item:nth-child(5) {
+      margin-top: 60px; }
+    .project__empolyee__item:nth-child(6) {
+      margin-top: 30px; }
+
 .main {
   background-position: center center;
   background-repeat: repeat;

@@ -1,0 +1,85 @@
+.project{
+  margin: 70px 0 0 0;
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  background-image: url("../images/backgorundcpu.jpg");
+  &__layer{
+    padding: 46px 0 30px 0;
+  }
+  &__title{
+    font-size: $default-header-size;
+    font-family: $headers-font-bold;
+    color: white;
+    text-align: center;
+  }
+
+  &__layer{
+    background-color: rgba(0, 0, 0, 0.862745);
+  }
+
+  &__text{
+    margin: 22px 0 0 0;
+    font-family: $headers-font-regular;
+    font-size: $subtitle-size;
+    text-align: center;
+    color: white;
+  }
+  &__manager{
+    width: 100%;
+    figure{
+      margin: 37px 0 0 0;
+    }
+    img{
+      width: 128px;
+      display: block;
+      margin: auto;
+    }
+    figcaption{
+      font-family: $headers-font-regular;
+      font-size: 14px;
+      text-align: center;
+      margin: 10px 0 0 0;
+    }
+
+  }
+
+  &__empolyee{
+    $step: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    &__item{
+      width: 16.5%;
+      .arrow{
+        width: 100px;
+        height: 20px;
+      }
+      figure{
+        img{
+          display: block;
+          margin: auto;
+          width: 128px;
+        }
+      }
+      figcaption{
+        text-align: center;
+      }
+    }
+    @for $items from 1 through 3 {
+      &__item:nth-child(#{$items}) {
+        margin-top: $items * 30px;
+      }
+    }
+    &__item:nth-child(4) {
+      margin-top: 90px;
+    }
+    &__item:nth-child(5) {
+      margin-top: 60px;
+    }
+    &__item:nth-child(6) {
+      margin-top: 30px;
+    }
+  }
+}

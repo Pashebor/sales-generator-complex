@@ -1,0 +1,15 @@
+.cases{
+  &__title{
+    font-family: $headers-font-bold;
+    color: $header-text-color;
+    font-size: $default-header-size;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    font-family: $headers-font-regular;
+    color: $subtittle-color;
+    font-size: 20px;
+    text-align: center;
+  }
+}

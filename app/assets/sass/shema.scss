@@ -1,0 +1,33 @@
+.schema{
+  margin: 35px 0 0 0;
+  &__title{
+    @extend .advancement__title;
+  }
+  &__block{
+    margin: 42px;
+    &__item{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 0 0 0;
+      .term{
+        font-family: $headers-font-regular;
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+        width: 20%;
+        text-align: center;
+        span{
+          color: rgb(76, 175, 80);
+        }
+      }
+      .scroll{
+        font-family: $headers-font-regular;
+        color: black;
+        font-size: 18px;
+        width: 75%;
+      }
+    }
+  }
+}

@@ -2,11 +2,25 @@
 @import "fonts";
 @import "advancement";
 @import "yourproject";
+@import "shema";
+@import "cases";
+@import "content.marketing";
+@import "semantic.core";
 
 .main{
-  background-position: center center;
+  /*background-position: center center;*/
   background-repeat: repeat;
-  background-size: cover;
+  background-size: contain;
   background-image: url("../images/complex-bakcground.png");
   width: 100%;
+  h1::after, h2::after, h5::after, h6::after{
+    display: none;
+  }
+  section{
+    padding: 0;
+  }
+  table td{
+    border-bottom: 0px !important;
+  }
+
 }

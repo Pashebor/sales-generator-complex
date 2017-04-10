@@ -65,6 +65,6 @@ module.exports = {
         new HtmlWebpackPlugin({
            template: path.resolve(root, './index.html')
         }),
-        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true })
+        new ExtractTextPlugin({ filename: './style.complex.css', disable: false, allChunks: true })
    ]
 };

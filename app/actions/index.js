@@ -1,11 +1,12 @@
 /*CONSTANTS*/
-export const GET_MODAL_FORM = 'showModal';
+export const SHOW_OFFER = 'showOffer';
 /*ACTIONS*/
 
-export const showModal = (logicValue) => {
+export const showOffer = (logicValue, index) => {
   return{
-      type: GET_MODAL_FORM,
-      show: logicValue
+      type: SHOW_OFFER,
+      show: logicValue,
+      btn: index
   }
 };
 

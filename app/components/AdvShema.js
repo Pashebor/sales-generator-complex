@@ -1,6 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {showOffer} from '../actions/index';
+import { bindActionCreators } from 'redux'
+import {connect} from 'react-redux';
 
-const AdvShema =() => {
+
+class AdvShema extends Component{
+
+    showOfferHandler(e) {
+        let val = 'scroll-' + e.target.getAttribute('value');
+        let index = parseInt(e.target.getAttribute('value'));
+        console.log(this.props.offerState);
+        if(!this.props.offerState) {
+            this.props.showOffer(true, index);
+            this.refs[val].style = 'display: block;';
+        } else {
+            this.props.showOffer(false);
+            e.target.classList.remove('icon-plus--rotate');
+            this.refs[val].style = 'display: none; ';
+        }
+
+    }
+
+    render() {
+
     return(
       <section className="schema">
         <div className="container">
@@ -8,9 +30,9 @@ const AdvShema =() => {
             <div className="schema__block">
                 <div className="schema__block__item">
                     <div className="term">
-                        <p><span>1-2</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
+                        <p><i className={(this.props.offerState.index === 1) ? 'icon-plus icon-plus--rotate': 'icon-plus'} onClick={this.showOfferHandler.bind(this)} value="1" ></i><span>1-2</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
                     </div>
-                    <div className="scroll">
+                    <div className="scroll" ref="scroll-1">
                         <p>
                             Установка и настройка панели вебмастера Яндекс и Google;<br/>
                             Установка счетчиков (Яндекс. Метрики и Google аналитики);<br/>
@@ -24,9 +46,9 @@ const AdvShema =() => {
                 </div>
                 <div className="schema__block__item">
                     <div className="term">
-                        <p><span>3-4</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
+                        <p><i className={(this.props.offerState.index === 2) ? 'icon-plus icon-plus--rotate': 'icon-plus'} onClick={this.showOfferHandler.bind(this)} value="2"></i><span>3-4</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
                     </div>
-                    <div className="scroll">
+                    <div className="scroll" ref="scroll-2">
                         <p>
                             Организация схемы внутренней перелинковки на сайте;<br/>
                             Создание контент-стратегии ресурса;Исправление технических ошибок;<br/>
@@ -39,9 +61,9 @@ const AdvShema =() => {
                 </div>
                 <div className="schema__block__item">
                     <div className="term">
-                        <p><span>5-8</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
+                        <p><i className={(this.props.offerState.index === 3) ? 'icon-plus icon-plus--rotate': 'icon-plus'} onClick={this.showOfferHandler.bind(this)} value="3"></i><span>5-8</span> НЕДЕЛЯ ПРОДВИЖЕНИЯ</p>
                     </div>
-                    <div className="scroll">
+                    <div className="scroll" ref="scroll-3">
                         <p>
                             Подбор отраслевых ресурсов для размещения ссылок на сайт;<br/>
                             Улучшение юзабилити сайта;<br/>
@@ -55,9 +77,9 @@ const AdvShema =() => {
                 </div>
                 <div className="schema__block__item">
                     <div className="term">
-                        <p><span>+</span> ЕЖЕНЕДЕЛЬНО / ЕЖЕМЕСЯЧНО</p>
+                        <p><i className={(this.props.offerState.index === 4) ? 'icon-plus icon-plus--rotate': 'icon-plus'} onClick={this.showOfferHandler.bind(this)} value="4"></i><span>+</span> ЕЖЕНЕДЕЛЬНО / ЕЖЕМЕСЯЧНО</p>
                     </div>
-                    <div className="scroll">
+                    <div className="scroll" ref="scroll-4">
                         <p>
                             Создание, редактирование и оптимизация контента для поисковых систем;<br/>
                             Оптимизация заголовков страниц;<br/>
@@ -77,6 +99,17 @@ const AdvShema =() => {
         </div>
       </section>
     );
+    }
 };
 
-export default AdvShema;
+const mapStateToProps = (store) => {
+    return {
+        offerState: store.complexReducer.show
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators({showOffer}, dispatch);
+};
+
+export default  connect(mapStateToProps, mapDispatchToProps)(AdvShema);

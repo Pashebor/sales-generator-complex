@@ -1,14 +1,16 @@
-import {GET_MODAL_FORM} from '../actions/index';
+import {SHOW_OFFER} from '../actions/index';
 
 const initialState = {
-    modalShow: false,
+    show: false,
+    index: null,
     outSide: false
 };
 
 const complexReducer =  ( state = initialState, action) => {
     switch (action.type) {
-        case GET_MODAL_FORM:
-            return Object.assign({}, state, {modalShow: action.show});
+        case SHOW_OFFER:
+            console.log(state);
+            return Object.assign({}, state, {show: action.show, index: action.btn});
         default: return state;
     }
 };

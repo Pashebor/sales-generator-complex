@@ -2,11 +2,9 @@
 export const SHOW_OFFER = 'showOffer';
 /*ACTIONS*/
 
-export const showOffer = (logicValue, index) => {
+export const showOffer = (index) => {
   return{
       type: SHOW_OFFER,
-      show: logicValue,
       btn: index
   }
 };
-

@@ -9,8 +9,7 @@ const initialState = {
 const complexReducer =  ( state = initialState, action) => {
     switch (action.type) {
         case SHOW_OFFER:
-            console.log(state);
-            return Object.assign({}, state, {show: action.show, index: action.btn});
+            return Object.assign({}, state, {index: action.btn});
         default: return state;
     }
 };

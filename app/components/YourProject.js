@@ -5,7 +5,7 @@ const YourProject = () => {
     <section className="project">
       <div className="project__layer">
         <div className="container">
-         <h2 className="project__title">КАК БУДЕТ СТРОИТСЯ РАБОТА НАД ВАШИМ ПРОЕКТОМ?</h2>
+         <h2 className="project__title">КАК БУДЕТ СТРОИТЬСЯ РАБОТА НАД ВАШИМ ПРОЕКТОМ?</h2>
          <p className="project__text">Для продвижения сайта каждого нашего клиента создается рабочая группа из 7 узконаправленных специалистов под руководством Менеджера проекта (Project Manager):</p>
          <div className="project__manager">
            <figure>
